@@ -2,9 +2,9 @@
 
 <div *ngFor="let task of regular_tasks;let i = index ">
   <div>
-  <span [ngClass]="{'strike':task.done == true}">{{i}}{{task.task_name}}</span>
+  <span [ngClass]="{'strike':task.done == true}">{{task.task_name}}</span>
   <span >
-  <input type="checkbox" [(ngModel)]="task.done" (click)="on(i)">
+  <input type="checkbox" [(ngModel)]="task.done" (change)="onchange(i,$event)" [checked]="ischecked">
    <label>
     Done
    </label><br><br>
@@ -14,7 +14,8 @@
 
 <h3>Outstanding tasks</h3>
 
-<ul *ngFor="let out of outstanding_tasks; let a =index">
-  <li>{{a}}{{out}}</li>
+ <ul *ngFor="let out of outstanding_tasks; let a =index"> 
+  <li>{{out}}</li>
 </ul>
+<p *ngIf="outstanding_tasks.length == 0">All Tasks are done</p>
 
