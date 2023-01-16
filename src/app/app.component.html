@@ -1,0 +1,20 @@
+<h3>Task todo</h3>
+
+<div *ngFor="let task of regular_tasks;let i = index ">
+  <div>
+  <span [ngClass]="{'strike':task.done == true}">{{task.task_name}}</span>
+  <span >
+  <input type="checkbox" [(ngModel)]="task.done" (click)="on(i)">
+   <label>
+    Done
+   </label><br><br>
+</span>
+  </div>
+</div>
+
+<h3>Outstanding tasks</h3>
+
+<ul *ngFor="let out of outstanding_tasks">
+  <li>{{out}}</li>
+</ul>
+

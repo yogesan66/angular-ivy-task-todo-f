@@ -1,0 +1,17 @@
+p {
+  font-family: Lato;
+}
+
+li{
+  list-style-type: none;
+
+}
+
+span{
+  padding-left: 3rem;
+}
+
+.strike{
+  text-decoration: line-through;
+}
+
