@@ -40,7 +40,8 @@ done :Boolean = false;
     // this.done = true;
     // if(this.done == true){
     // i = 0
-    this.outstanding_tasks.splice(i,1);
+     this.outstanding_tasks.splice(i,1);
+    //this.regular_tasks.splice(i,1);
     console.log(i)
     // this.done = false
     // }
